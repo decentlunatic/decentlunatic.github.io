@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
+body {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content {
+  max-width: 1000px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.loader-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.yet-wrapper {
+  width: 100%;
+  text-align: right;
+}
+
+.yet {
+  font-size: 18px;
+  animation: glitch1 2.5s infinite;
+}
+
+.glitch {
+  position: relative;
+}
+.glitch:before, .glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+.glitch:after {
+  color: #f0f;
+  z-index: -2;
+  animation: glitch 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse infinite;
+}
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+  animation: glitch 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
